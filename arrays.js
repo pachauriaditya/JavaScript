@@ -2,8 +2,11 @@
          //and has numbers for performing common array operations.
 
 //arrays of js are resizeable and can contain a mix of different datatypes.
+
 //js array-copy operations create shallow copies rather than deep copies.
+
 //shallow copy of an object is a copy whose properties share the same references.
+
 //deep copy of an object is a copy whose properties do not share the same references.
 
 const myArr = [0,1,2,3,4,5]

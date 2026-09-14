@@ -516,3 +516,166 @@ Batman
 
 // console.log(Array.of(score1,score2,score3)) // [ 100, 200, 300 ] ---> of -> Returns a new array from a set of elements
 // we can also use 'from' instead of "of" 
+
+//---------------------------------xxxx-----------------------------------------------------------------xxxx---------------------------------------------------xxxx------------------------
+//objects
+
+/*
+ Singleton --> when we made an object using constructor type way
+ and he code inside a module executes exactly once when first imported. 
+ Every subsequent import receives the exact same instance
+
+ Object.create ---> Create an Object and the singleton is created inside it
+*/
+
+//Object literals
+//the object is defined in key:value pairs and the keys are considered as string
+
+// const mySym = Symbol("key1")
+
+// const JsUser = {
+//   name : "aditya",
+//   "full Name" : "Bruce Wayne",
+//   //mySym : "myKey1" --> if we use symbol like this before declaring then we get the return type as string not a symbol
+//   [mySym] : "myKey1", //to get the return types as symbol we use this.
+//   age : 20,
+//   location : "India",
+//   email : "aditya@google.com",
+//   isLoggedIn : false,
+//   lastLoginDays : ["Monday", "Saturday",]
+// }
+
+//to access these key:values
+// console.log(JsUser.email); //aditya@google.com
+// //or
+// console.log(JsUser["email"]); //aditya@google.com --> while accessing values using [] braces we should types the key in the form of string
+//console.log(JsUser.full name); // we can see that here we can't access the key "Full Name" that's why we use [] braces
+
+// console.log(JsUser["full Name"]);
+// console.log(JsUser[mySym]); //we didn't use ""  here cause we already define it in [] as symbol
+
+//to change the value 
+// JsUser["email"] = "aditya@chatgpt.com"
+// console.log(JsUser);
+/* 
+{
+  name: 'aditya',
+  'full Name': 'Bruce Wayne',
+  age: 20,
+  location: 'India',
+  email: 'aditya@chatgpt.com', //updated value
+  isLoggedIn: false,
+  lastLoginDays: [ 'Monday', 'Saturday' ],
+  Symbol(key1): 'myKey1'
+}
+*/
+
+//to lock the value ie., no one can change it
+// Object.freeze(JsUser)
+// JsUser["email"] = "aditya@microsoft.com"
+// console.log(JsUser);
+/*
+{
+  name: 'aditya',
+  'full Name': 'Bruce Wayne',
+  age: 20,
+  location: 'India',
+  email: 'aditya@chatgpt.com',  //value doesn't change
+  isLoggedIn: false,
+  lastLoginDays: [ 'Monday', 'Saturday' ],
+  Symbol(key1): 'myKey1'
+}
+
+*/
+
+//to use a function in object
+
+// JsUser.greeting = function(){    //we stored the function in greeting variable
+//   console.log("Hello JS User");
+// }
+
+
+// JsUser.greeting2 = function(){
+//   console.log(`hello JS User, ${this.name}`);
+// }
+
+// console.log(JsUser.greeting); //[Function (anonymous)] ---> reference of a function
+// console.log(JsUser.greeting()); //Hello JS User
+
+// console.log(JsUser.greeting2);  //[Function (anonymous)]
+// console.log(JsUser.greeting2()); //hello JS User, aditya
+
+//along with these output we may get to see undefined in the terminal which may be render because an execution is made by browser also, so it might come because of this
+
+// const tinderUser = new Object()
+// console.log(tinderUser); //{}
+
+// tinderUser.id = "123abc"
+// tinderUser.name = "Jinx"
+// tinderUser.isLoggedIn = false
+
+// console.log(tinderUser); //{ id: '123abc', name: 'Jinx', isLoggedIn: false }
+
+// const regularUser = {
+//   email : "some@user.com",
+//   fullName : {
+//     userfullname :{
+//       firstName:"Bruce",
+//       lastName : "Wayne"
+//     }
+//   }
+// }
+
+// console.log(regularUser);
+/*
+{
+  email: 'some@user.com',
+  fullName: { userfullname: { firstName: 'Bruce', lastName: 'Wayne' } }
+}
+*/
+
+// console.log(regularUser.fullName); //{ userfullname: { firstName: 'Bruce', lastName: 'Wayne' } }
+// console.log(regularUser.fullName.userfullname.lastName); //Wayne
+
+// //to merge objects
+// const obj1 = {1: "a" , 2: "b"}
+// const obj2 = {3: "a" , 4: "b"}
+// const obje = {4:"a" , 5: "b"}
+
+// const obj3 = Object.assign(obj1,obj2)  // we can also use Object.assign({},obj1,obj2) --> there is no change in result it's optional
+// console.log(obj3); //{ '1': 'a', '2': 'b', '3': 'a', '4': 'b' }
+
+// const obj4 = {...obj1,...obj2,...obje}
+// console.log(obj4); //{ '1': 'a', '2': 'b', '3': 'a', '4': 'a', '5': 'b' }
+
+// //to access all the keys
+// console.log(Object.keys(tinderUser)); // [ 'id', 'name', 'isLoggedIn' ]
+// //to access all the values
+// console.log(Object.values(tinderUser)); // [ '123abc', 'Jinx', false ]
+
+// console.log(Object.entries(tinderUser));
+// /*
+// [ [ 'id', '123abc' ], [ 'name', 'Jinx' ], [ 'isLoggedIn', false ] ]
+// */
+// console.log(tinderUser.hasOwnProperty('isLoggedIn')); //true
+
+
+// //Object de-structure
+// const course = {
+//   courseName : "JavaScript",
+//   price : "999",
+//   courseInstructor : "Hitesh"
+// }
+
+// const {courseInstructor} = course
+// console.log(courseInstructor); //Hitesh
+// //to de structure the value 
+// const {courseInstructor : Instructor} = course
+// console.log(Instructor);// Hitesh ---> Result will be same
+
+
+
+
+
+
+
