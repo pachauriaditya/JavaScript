@@ -189,3 +189,19 @@
 
 // const myArray =[2,3,4,5,6]
 // myArray.forEach((element) => console.log(element)) //2 3 4 5 6
+
+
+//Immediately Invoked Function Expressions(IIFE)
+//the semicolon plays a very important role in IIFE we should use semicolon after calling function...
+// (function sayMyName(){
+//   console.log("aditya");
+// })();
+//global scope me function ko call karne ke liye hum IIFE ka use karte hai taki function ke andar ke variables global scope me na chale jaye aur wo sirf function ke andar hi rahe.
+
+// (() => {
+//   console.log("aditya");
+// })();
+
+// ((name) => {
+//   console.log("aditya",name);
+// })("pachauri");
