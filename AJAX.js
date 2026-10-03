@@ -18,6 +18,17 @@
 //  -> Jquery Library.
 //  -> Node JS HTTP Module.
 
+
+//GET -> to fetch data from a server.  (READ)
+//POST -> to send some data to a server. (CREATE)
+//PUT -> to update at server. (UPDATE)
+//DELETE -> to delete data at server. (DELETE)
+
+
+
+
+
+
 //  ------------------------------------------------------------------------------------------
 
 
@@ -167,3 +178,11 @@ let displayApiData = (users) => {
 
     document.querySelector('#api-card').innerHTML = htmlTemplate;
 };
+
+
+
+
+
+
+
+

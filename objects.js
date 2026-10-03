@@ -191,3 +191,5 @@ const {courseInstructor : Instructor} = course
 console.log(Instructor);
 //Hitesh ---> Result will be same
 
+
+//the global object in browser is window and in nodejs it is global
