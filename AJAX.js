@@ -1,47 +1,47 @@
-//  INTRODUCTION TO AJAX->
+// //  INTRODUCTION TO AJAX->
 
-//  ->Asynchronous JavaScript & XML.
-//  ->Not a technology.
-//  ->Sends and Receives data from client and server Asynchronously.
-//  ->different than regular HTTP Requests.
-//  ->uses XMLHTTPRequest Object.
-//  ->carries data in xml, plain text and JSON format.
-//  ->Does not refresh the browser to Receive data from server.
+// //  ->Asynchronous JavaScript & XML.
+// //  ->Not a technology.
+// //  ->Sends and Receives data from client and server Asynchronously.
+// //  ->different than regular HTTP Requests.
+// //  ->uses XMLHTTPRequest Object.
+// //  ->carries data in xml, plain text and JSON format.
+// //  ->Does not refresh the browser to Receive data from server.
 
-//  ------------------------------------------------------------------------------------------
+// //  ------------------------------------------------------------------------------------------
 
-//  WAYS OF AJAX ->
+// //  WAYS OF AJAX ->
 
-//  -> regular AJAX Requests.
-//  -> fetch API.
-//  -> Axios Library.
-//  -> Jquery Library.
-//  -> Node JS HTTP Module.
-
-
-//GET -> to fetch data from a server.  (READ)
-//POST -> to send some data to a server. (CREATE)
-//PUT -> to update at server. (UPDATE)
-//DELETE -> to delete data at server. (DELETE)
+// //  -> regular AJAX Requests.
+// //  -> fetch API.
+// //  -> Axios Library.
+// //  -> Jquery Library.
+// //  -> Node JS HTTP Module.
 
 
+// //GET -> to fetch data from a server.  (READ)
+// //POST -> to send some data to a server. (CREATE)
+// //PUT -> to update at server. (UPDATE)
+// //DELETE -> to delete data at server. (DELETE)
 
 
 
 
-//  ------------------------------------------------------------------------------------------
+
+
+// //  ------------------------------------------------------------------------------------------
 
 
 
 
-// //text file data
+// // //text file data
 
 
-// onload
-// → request complete
-// → check status
-// → if 200 → display data
-// → if not 200 → no error handling 
+// // onload
+// // → request complete
+// // → check status
+// // → if 200 → display data
+// // → if not 200 → no error handling 
 
 let textButton = document.getElementById('text-btn');
 textButton.addEventListener('click',function(){
@@ -178,10 +178,6 @@ let displayApiData = (users) => {
 
     document.querySelector('#api-card').innerHTML = htmlTemplate;
 };
-
-
-
-
 
 
 
